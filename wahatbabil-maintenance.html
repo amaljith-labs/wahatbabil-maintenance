@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Maintenance Services in Dubai | Wahat Babil</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Matched to wahatbabil.com actual palette */
+    --charcoal: #1A1A1A;
+    --charcoal-nav: #111111;
+    --gold: #C9A84C;
+    --gold-light: #E4C472;
+    --gold-pale: #FBF6EA;
+    --white: #FFFFFF;
+    --off-white: #F9F7F4;
+    --light-bg: #F4F1EB;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --text-soft: #6B6B6B;
+    --line: #E0D9CC;
+    --line-light: #EDE8DF;
+    --green: #2A7D5F;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+  }
+
+  p { line-height: 1.75; color: var(--text-mid); margin: 0; }
+  a { text-decoration: none; }
+
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: 'Inter', sans-serif;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 2px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .02em;
+    transition: all .2s;
+    cursor: pointer;
+  }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--charcoal);
+    border: 2px solid var(--gold);
+  }
+  .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+  .btn-outline-white {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+  .btn-outline-dark {
+    background: transparent;
+    color: var(--charcoal);
+    border: 2px solid var(--charcoal);
+  }
+  .btn-outline-dark:hover { background: var(--charcoal); color: #fff; }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--charcoal-nav);
+    color: #AAAAAA;
+    font-size: 12.5px;
+    border-bottom: 1px solid #2A2A2A;
+  }
+  .topbar .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+  }
+  .topbar a { color: #CCCCCC; transition: color .15s; }
+  .topbar a:hover { color: var(--gold); }
+  .topbar-left { display: flex; align-items: center; gap: 8px; }
+  .topbar-left::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--charcoal-nav);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #222;
+  }
+  nav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+  }
+  .wordmark {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--white);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .wordmark span { color: var(--gold); }
+  .navlinks {
+    display: flex;
+    gap: 32px;
+    font-size: 13.5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  .navlinks a { color: #CCCCCC; letter-spacing: .01em; transition: color .15s; }
+  .navlinks a:hover,
+  .navlinks .active { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--charcoal);
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--charcoal-nav);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(201,168,76,0.05) 0%, transparent 60%);
+  }
+  /* decorative rule lines */
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.015) 0px,
+      rgba(255,255,255,0.015) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+    pointer-events: none;
+  }
+  .hero .wrap {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    padding: 76px 24px 64px;
+    align-items: center;
+  }
+  .hero-eyebrow { margin-bottom: 18px; }
+  .hero h1 {
+    color: var(--white);
+    font-size: 44px;
+    line-height: 1.12;
+    font-weight: 800;
+    margin: 0 0 20px;
+    letter-spacing: -.02em;
+  }
+  .hero h1 em {
+    color: var(--gold);
+    font-style: normal;
+  }
+  .hero-desc {
+    color: #AAAAAA;
+    font-size: 16.5px;
+    max-width: 500px;
+    line-height: 1.75;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  /* hero card */
+  .hero-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid var(--line);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .hero-card-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-card-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  .resp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line-light);
+    font-size: 13.5px;
+  }
+  .resp-row:last-child { border-bottom: none; }
+  .resp-row span { color: var(--text-soft); }
+  .resp-row b { color: var(--text-dark); font-weight: 600; }
+  .tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 2px;
+    background: #E8F5EE;
+    color: var(--green);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  /* ── STATS STRIP ── */
+  .stats {
+    background: var(--gold);
+    border-bottom: 3px solid var(--gold-light);
+  }
+  .stats .wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 24px;
+  }
+  .stats-item {
+    text-align: center;
+    padding: 22px 16px;
+    border-right: 1px solid rgba(255,255,255,0.3);
+  }
+  .stats-item:last-child { border-right: none; }
+  .stats-item b {
+    display: block;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.1;
+  }
+  .stats-item span {
+    font-size: 12px;
+    color: var(--charcoal);
+    opacity: 0.75;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-top: 3px;
+    display: block;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 80px 0; }
+  .section-head { max-width: 640px; margin-bottom: 52px; }
+  .section-head h2 {
+    font-size: 32px;
+    margin: 14px 0 14px;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+  }
+  .section-head p { font-size: 16px; }
+  .center { text-align: center; margin-left: auto; margin-right: auto; }
+
+  /* ── SERVICE CATEGORIES ── */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .cat-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 28px;
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform .25s;
+  }
+  .cat-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+  }
+  .cat-card:hover::before { transform: scaleX(1); }
+  .cat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    background: var(--gold-pale);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 18px;
+    border: 1px solid #E4D9BF;
+    letter-spacing: .04em;
+  }
+  .cat-card h4 {
+    font-size: 17px;
+    margin-bottom: 14px;
+    color: var(--text-dark);
+  }
+  .cat-card ul {
+    margin: 0; padding: 0;
+    list-style: none;
+    font-size: 13.5px;
+    color: var(--text-soft);
+  }
+  .cat-card li {
+    padding: 5px 0 5px 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .cat-card li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 10px;
+    top: 7px;
+  }
+  .cat-card.dashed {
+    background: var(--off-white);
+    border-style: dashed;
+    border-color: var(--line);
+  }
+  .cat-card.dashed:hover { transform: none; box-shadow: none; }
+  .soon {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    background: var(--gold-pale);
+    padding: 4px 12px;
+    border-radius: 2px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    border: 1px solid #E4D9BF;
+  }
+
+  /* ── WHY CHOOSE ── */
+  .why-wrap { background: var(--charcoal-nav); }
+  .why-wrap .section-head h2 { color: var(--white); }
+  .why-wrap .section-head p { color: #999; }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .why-card {
+    background: #1C1C1C;
+    border-radius: 6px;
+    padding: 24px;
+    border: 1px solid #2A2A2A;
+    border-top: 3px solid var(--gold);
+  }
+  .why-card .num {
+    color: var(--gold);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .why-card .num::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #333;
+  }
+  .why-card h4 { color: var(--white); font-size: 15.5px; margin-bottom: 10px; }
+  .why-card p { color: #888; font-size: 13.5px; line-height: 1.7; }
+
+  /* ── PROCESS ── */
+  .process {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+  .pstep {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+  }
+  .pstep:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: -4px;
+    width: 55%;
+    border-top: 2px dashed var(--line);
+  }
+  .pnum {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--charcoal);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 2px var(--gold);
+  }
+  .pstep h4 { font-size: 15px; margin-bottom: 10px; color: var(--text-dark); }
+  .pstep p { font-size: 13.5px; line-height: 1.65; color: var(--text-soft); }
+
+  /* ── AREAS ── */
+  .areas-section { background: var(--light-bg); }
+  .areas-box {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .areas-box h2 { font-size: 26px; margin: 14px 0 16px; letter-spacing: -.02em; }
+  .pill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .pill {
+    background: var(--off-white);
+    border: 1px solid var(--line);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 3px;
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+  }
+  .pill.fast {
+    background: var(--gold-pale);
+    border-color: #E4D9BF;
+    color: #7A5E1A;
+  }
+  .pill-label {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 13px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ── WARRANTY ── */
+  .warranty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .warranty-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 26px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .warranty-card::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--gold);
+  }
+  .warranty-card h4 { font-size: 16px; margin-bottom: 10px; color: var(--text-dark); }
+  .warranty-card p { font-size: 14px; line-height: 1.7; }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--off-white); }
+  .faq { max-width: 760px; margin: 0 auto; }
+  details {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 18px 24px;
+    transition: box-shadow .2s;
+  }
+  details[open] { box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-color: var(--gold); }
+  summary {
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--text-dark);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    gap: 16px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    font-size: 22px;
+    color: var(--gold);
+    font-weight: 400;
+    flex-shrink: 0;
+    transition: transform .2s;
+    font-family: 'Inter', sans-serif;
+  }
+  details[open] summary::after { content: "–"; }
+  details p { margin-top: 14px; font-size: 14.5px; color: var(--text-soft); }
+
+  /* ── CTA BAND ── */
+  .cta-band {
+    background: var(--gold);
+    text-align: center;
+    padding: 64px 0;
+  }
+  .cta-band h2 {
+    color: var(--charcoal);
+    font-size: 30px;
+    margin-bottom: 12px;
+    letter-spacing: -.02em;
+  }
+  .cta-band p { color: rgba(26,26,26,0.7); margin-bottom: 28px; font-size: 16px; }
+  .cta-band .btn-dark {
+    background: var(--charcoal);
+    color: var(--white);
+    border: 2px solid var(--charcoal);
+  }
+  .cta-band .btn-dark:hover { background: #333; border-color: #333; }
+  .cta-band .btn-ring {
+    background: transparent;
+    color: var(--charcoal);
+    border: 2px solid var(--charcoal);
+  }
+  .cta-band .btn-ring:hover { background: rgba(0,0,0,.08); }
+  .cta-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal-nav);
+    color: #888;
+    padding: 60px 0 26px;
+    font-size: 13.5px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 36px;
+    margin-bottom: 40px;
+  }
+  .foot-wordmark {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .foot-wordmark span { color: var(--gold); }
+  footer .foot-desc { color: #777; font-size: 13.5px; line-height: 1.7; max-width: 300px; }
+  footer h5 {
+    color: var(--white);
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 18px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { margin-bottom: 10px; line-height: 1.5; }
+  footer a { color: #888; transition: color .15s; }
+  footer a:hover { color: var(--gold); }
+  .foot-divider { border: none; border-top: 1px solid #1E1E1E; margin: 0 0 20px; }
+  .foot-bottom {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    padding-top: 6px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .hero .wrap { grid-template-columns: 1fr; padding: 56px 24px 48px; }
+    .hero h1 { font-size: 34px; }
+    .stats .wrap { grid-template-columns: repeat(2, 1fr); }
+    .stats-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.2); }
+    .stats-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.2); }
+    .stats-item:last-child { border-bottom: none; }
+    .cat-grid { grid-template-columns: 1fr 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .process { flex-direction: column; gap: 28px; }
+    .pstep::after { display: none; }
+    .areas-box { grid-template-columns: 1fr; padding: 28px; }
+    .warranty-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .navlinks { display: none; }
+    .cat-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr; }
+    .topbar .wrap { flex-direction: column; gap: 4px; text-align: center; }
+    .stats .wrap { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="topbar-left">On-demand maintenance, 9 AM – 5 PM, 7 days a week</span>
+    <span>
+      <a href="tel:+971506767275">+971 50 676 7275</a>
+      &nbsp;|&nbsp;
+      <a href="mailto:manager@wahatbabil.com">manager@wahatbabil.com</a>
+    </span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <a href="#" class="wordmark">WAHAT<span>BABIL</span></a>
+    <div class="navlinks">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#" class="active">Maintenance</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <a href="#" class="nav-cta">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding: 0;">
+  <div class="wrap">
+    <div>
+      <div class="hero-eyebrow">
+        <span class="eyebrow">Home Maintenance, Dubai</span>
+      </div>
+      <h1>Reliable home repairs, handled by <em>technicians we employ directly</em>.</h1>
+      <p class="hero-desc">From a dripping tap to a tripping circuit, Wahat Babil's maintenance team covers handyman, plumbing, electrical, AC and waterproofing work across Dubai — with a clear estimate before we start and a warranty after we finish.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-gold">Request a Visit</a>
+        <a href="https://wa.me/971506767275" class="btn btn-outline-white">WhatsApp Us</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-title">Today at a Glance</div>
+      <div class="resp-row">
+        <span>Operating hours</span>
+        <b>9 AM – 5 PM</b>
+      </div>
+      <div class="resp-row">
+        <span>Booking notice</span>
+        <b>1–2 days</b>
+      </div>
+      <div class="resp-row">
+        <span>Same-day visits</span>
+        <b>Subject to availability</b>
+      </div>
+      <div class="resp-row">
+        <span>VAT</span>
+        <b>Included in quote</b>
+      </div>
+      <div class="resp-row">
+        <span>Coverage</span>
+        <span class="tag">Dubai only</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-item"><b>9</b><span>Areas covered</span></div>
+    <div class="stats-item"><b>3-day</b><span>Recurrence warranty</span></div>
+    <div class="stats-item"><b>100%</b><span>In-house technicians</span></div>
+    <div class="stats-item"><b>Photo</b><span>Report after every visit</span></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section style="background: var(--white);">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">What we cover</span>
+      <h2>Five trades, one team to call</h2>
+      <p>Every category below is handled by our own technicians — no subcontracted strangers, no guesswork on pricing.</p>
+    </div>
+    <div class="cat-grid">
+
+      <div class="cat-card">
+        <div class="cat-icon">CH</div>
+        <h4>Civil &amp; Handyman</h4>
+        <ul>
+          <li>Wall painting touch-ups</li>
+          <li>Ceiling &amp; gypsum repairs</li>
+          <li>Tile replacement</li>
+          <li>Cabinet fixing &amp; furniture assembly</li>
+          <li>Silicone and grout work</li>
+        </ul>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-icon">PL</div>
+        <h4>Plumbing</h4>
+        <ul>
+          <li>Leak fixing &amp; drain blockage</li>
+          <li>Water heater replacement</li>
+          <li>WC / mixer installation</li>
+          <li>Bathtub installation</li>
+          <li>Accessories installation</li>
+        </ul>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-icon">EL</div>
+        <h4>Electrical</h4>
+        <ul>
+          <li>Lights, pendants &amp; chandeliers</li>
+          <li>DB checking &amp; tripping issues</li>
+          <li>Socket &amp; switch replacement</li>
+          <li>Outdoor lighting</li>
+          <li>Smart home, automation &amp; solar</li>
+        </ul>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-icon">AC</div>
+        <h4>AC &amp; HVAC</h4>
+        <ul>
+          <li>AC servicing &amp; gas top-up</li>
+          <li>Duct cleaning &amp; coil cleaning</li>
+          <li>Thermostat &amp; compressor replacement</li>
+          <li>FCU maintenance</li>
+          <li>Diagnostics</li>
+        </ul>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-icon">WP</div>
+        <h4>Waterproofing</h4>
+        <ul>
+          <li>Roof waterproofing</li>
+          <li>Bathroom waterproofing</li>
+          <li>Balcony waterproofing</li>
+        </ul>
+      </div>
+
+      <div class="cat-card dashed">
+        <div class="cat-icon" style="background: var(--white);">PG</div>
+        <h4>Pool &amp; Garden</h4>
+        <p style="font-size: 14px; color: var(--text-soft);">Pool and garden maintenance is joining the line-up soon.</p>
+        <span class="soon">Coming soon</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why-wrap">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" style="color: var(--gold);">Why Wahat Babil</span>
+      <h2 style="color: var(--white);">Built on the same standards as our renovations</h2>
+      <p style="color: #888;">Maintenance is a smaller job, not a smaller standard.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="num">01</div>
+        <h4>Directly employed</h4>
+        <p>Every technician works for us — insured, background-verified, and identifiable by company ID and uniform.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">02</div>
+        <h4>Estimate first</h4>
+        <p>You get an estimate before work begins. If the scope changes on site, we tell you before continuing.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">03</div>
+        <h4>Warranty on the work</h4>
+        <p>Workmanship, materials, and parts we supply are covered. If the same issue returns within 3 days, the follow-up visit is free.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">04</div>
+        <h4>Documented visits</h4>
+        <p>A digital service report — with before-and-after photos on request — follows every visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section style="background: var(--off-white);">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">How it works</span>
+      <h2>From request to resolved</h2>
+    </div>
+    <div class="process">
+      <div class="pstep">
+        <div class="pnum">1</div>
+        <h4>Reach out</h4>
+        <p>Call, WhatsApp or email — emergencies outside business hours are handled the same way.</p>
+      </div>
+      <div class="pstep">
+        <div class="pnum">2</div>
+        <h4>Get an estimate</h4>
+        <p>We confirm scope and share an upfront estimate, VAT included.</p>
+      </div>
+      <div class="pstep">
+        <div class="pnum">3</div>
+        <h4>Technician visits</h4>
+        <p>Book a slot 1–2 days ahead, or same-day if our schedule allows. Technician details are shared beforehand.</p>
+      </div>
+      <div class="pstep">
+        <div class="pnum">4</div>
+        <h4>Report &amp; warranty</h4>
+        <p>You receive a digital service report. Workmanship is covered, with free follow-up on recurrence within 3 days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas-section">
+  <div class="wrap">
+    <div class="areas-box">
+      <div>
+        <span class="eyebrow">Service area</span>
+        <h2>Dubai only — for now</h2>
+        <p>We don't yet operate in Sharjah, Abu Dhabi or other emirates. Within Dubai, there's no extra charge for location, and owners based outside the UAE can arrange visits remotely. We also work in gated communities and newly handed-over developments, coordinating any required security or management approval.</p>
+      </div>
+      <div>
+        <p class="pill-label">Fastest response in:</p>
+        <div class="pill-list">
+          <span class="pill fast">Barsha</span>
+          <span class="pill fast">Arabian Ranches</span>
+          <span class="pill fast">Dubai Hills</span>
+          <span class="pill fast">Emirates Hills</span>
+          <span class="pill fast">Emirates Living</span>
+          <span class="pill fast">Jumeirah Park</span>
+          <span class="pill fast">Jumeirah Living</span>
+          <span class="pill fast">JVT</span>
+          <span class="pill fast">JVC</span>
+        </div>
+        <p style="margin-top: 16px; font-size: 13.5px; color: var(--text-soft);">Outside these areas, we still come — response times may simply run a little longer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING & WARRANTY -->
+<section style="background: var(--white);">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Pricing &amp; Warranty</span>
+      <h2>What's covered, and what it costs</h2>
+      <p>Charges depend on the work itself — there's no flat call-out fee we can quote blind. What's fixed is how the warranty works.</p>
+    </div>
+    <div class="warranty-grid">
+      <div class="warranty-card">
+        <h4>Pricing</h4>
+        <p>Cost depends on the scope of work and differs between apartments and villas. VAT is included, and emergency call-outs are priced differently from scheduled visits. We accept bank transfer and cash.</p>
+      </div>
+      <div class="warranty-card">
+        <h4>Warranty coverage</h4>
+        <p>Our warranty covers workmanship, materials and spare parts we supply, and corrective visits tied to the original repair. Manufacturer warranties on installed parts are passed on to you.</p>
+      </div>
+      <div class="warranty-card">
+        <h4>What voids it</h4>
+        <p>If the same issue reoccurs within 3 days, the follow-up visit is free. If another contractor works on the same issue afterward, our warranty on it no longer applies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">FAQ</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Which areas in Dubai do you cover?</summary>
+        <p>We cover Barsha, Arabian Ranches, Dubai Hills, Emirates Hills, Emirates Living, Jumeirah Park, Jumeirah Living, JVT and JVC with our fastest response times, and we serve the rest of Dubai too — including apartments, villas, townhouses and gated communities such as Palm Jumeirah and Emirates Hills.</p>
+      </details>
+      <details>
+        <summary>How are service charges worked out?</summary>
+        <p>Charges depend on the work required. We provide an estimate before starting, which may change if extra work is identified once the technician is on site. VAT is included in all pricing.</p>
+      </details>
+      <details>
+        <summary>Is there a warranty on completed work?</summary>
+        <p>Yes — covering workmanship, materials and spare parts we supply, and corrective visits related to the original repair. If the same issue reoccurs within 3 days, the follow-up visit is free of charge.</p>
+      </details>
+      <details>
+        <summary>How quickly can you respond to an emergency?</summary>
+        <p>Response time depends on the type of emergency. For non-emergency bookings, we ask for 1–2 days' notice; same-day service is available if our schedule allows. Emergencies outside business hours can be raised via WhatsApp or phone call.</p>
+      </details>
+      <details>
+        <summary>Are your technicians your own staff?</summary>
+        <p>Yes, all technicians are directly employed by Wahat Babil, insured and background-verified. They carry identification and wear company uniforms, and you can request the same technician for future visits.</p>
+      </details>
+      <details>
+        <summary>How can I book a visit?</summary>
+        <p>Phone, WhatsApp or email all work. Technician details and an estimated arrival time are shared with you ahead of the visit, and a digital service report — with before-and-after photos on request — follows after.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Something needs fixing?</h2>
+    <p>Tell us what's wrong — we'll come back with an estimate, not a guess.</p>
+    <div class="cta-ctas">
+      <a href="tel:+971506767275" class="btn btn-dark">Call +971 50 676 7275</a>
+      <a href="https://wa.me/971506767275" class="btn btn-ring">WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-wordmark">WAHAT<span>BABIL</span></div>
+        <p class="foot-desc">Wahat Babil is a premium home renovation and maintenance company based in Dubai, serving since 2006.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Quick Contact</h5>
+        <ul>
+          <li><a href="tel:+971506767275">+971 50 676 7275</a></li>
+          <li><a href="tel:+971504983137">+971 50 498 3137</a></li>
+          <li><a href="mailto:manager@wahatbabil.com">manager@wahatbabil.com</a></li>
+          <li>Al Attar Business Tower, DIFC, Dubai</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="foot-divider" />
+    <div class="foot-bottom">© 2026 Wahat Babil. All rights reserved. www.wahatbabil.com</div>
+  </div>
+</footer>
+
+</body>
+</html>
